@@ -19,6 +19,7 @@ function  App()
          console.log(response.data.articles);
       })
     },[])
+    
     /*
       useEffect(()=>{
        const fatchData=async ()=>{
