@@ -19,6 +19,16 @@ function  App()
          console.log(response.data.articles);
       })
     },[])
+    /*
+      useEffect(()=>{
+       const fatchData=async ()=>{
+           const result=await axios("http://localhost:3000/music.json")
+           console.log(result.data);
+           setMusic(result.data);
+       }
+       fatchData();
+   },[])
+     */
     const categoryChange=(no)=>{
         let site="";
         let arr=["","category=business","category=enterainment",
@@ -79,19 +89,19 @@ function  App()
               <tbody>
                   <tr>
                       <td className={"text-center"}>
-                          <button className={"btn btn-lg btn-default"} onClick={categoryChange(0)}>전체</button>
+                          <button className={"btn btn-lg btn-default"} onClick={e=>categoryChange(0)}>전체</button>
 
-                          <button className={"btn btn-lg btn-active"} onClick={categoryChange(1)}>비지니스</button>
+                          <button className={"btn btn-lg btn-active"} onClick={e=>categoryChange(1)}>비지니스</button>
 
-                          <button className={"btn btn-lg btn-primary"} onClick={categoryChange(2)}>엔터테인먼트</button>
+                          <button className={"btn btn-lg btn-primary"} onClick={e=>categoryChange(2)}>엔터테인먼트</button>
 
-                          <button className={"btn btn-lg btn-danger"} onClick={categoryChange(3)}>건강</button>
+                          <button className={"btn btn-lg btn-danger"} onClick={e=>categoryChange(3)}>건강</button>
 
-                          <button className={"btn btn-lg btn-success"} onClick={categoryChange(4)}>과학</button>
+                          <button className={"btn btn-lg btn-success"} onClick={e=>categoryChange(4)}>과학</button>
 
-                          <button className={"btn btn-lg btn-warning"} onClick={categoryChange(5)}>스포츠</button>
+                          <button className={"btn btn-lg btn-warning"} onClick={e=>categoryChange(5)}>스포츠</button>
 
-                          <button className={"btn btn-lg btn-info"} onClick={categoryChange(6)}>기술</button>
+                          <button className={"btn btn-lg btn-info"} onClick={e=>categoryChange(6)}>기술</button>
                       </td>
                   </tr>
               </tbody>
